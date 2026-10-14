@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yaashi Properties & Finance | Luxury Properties (₹50k - ₹5 Cr)</title>
-  <meta name="description" content="Yaashi Properties & Finance Services - Sales, Purchase, Collaboration. Luxury Builder Floors, Commercial Shops, Flats & Turnkey Plot Redevelopment in Naraina, New Delhi.">
+  <title>Yaashi Properties & Finance | Luxury Properties & Builder Floors</title>
+  <meta name="description" content="Yaashi Properties & Finance Services - Sales, Purchase, Collaboration & Rent. Luxury Builder Floors, Commercial Shops, Flats & Turnkey Plot Redevelopment in Naraina, New Delhi.">
+  <meta property="og:title" content="Yaashi Properties & Finance | Luxury Properties & Builder Floors">
+  <meta property="og:description" content="Sales, Purchase, Collaboration & Rent. Luxury Builder Floors, Commercial Shops & Turnkey Plot Redevelopment in Naraina, New Delhi.">
+  <meta property="og:type" content="website">
+
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <style>
     /* ==========================================================================
-       YAASHI PROPERTIES & FINANCE - STANDALONE PRODUCTION STYLESHEET
-       Self-contained, responsive, luxury obsidian & gold theme.
+       YAASHI PROPERTIES & FINANCE - STANDALONE SINGLE-FILE PRODUCTION STYLESHEET
+       Ready for GitHub Pages (Zero external CSS dependencies)
        ========================================================================== */
     :root {
       --bg-dark: #0b0d12;
@@ -59,13 +64,11 @@
       flex-direction: column;
     }
 
-    /* Custom Scrollbars */
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg-dark); }
     ::-webkit-scrollbar-thumb { background: #232834; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--gold-primary); }
 
-    /* Typography */
     .font-serif { font-family: var(--font-serif); }
     .font-sans { font-family: var(--font-sans); }
     .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
@@ -80,7 +83,6 @@
       background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     }
 
-    /* Layout Containers */
     .container {
       width: 100%;
       max-width: 1240px;
@@ -108,7 +110,7 @@
     .top-bar-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       color: #ded8ce;
     }
     .top-bar-right {
@@ -117,14 +119,14 @@
       gap: 14px;
     }
     .hotline-link {
-      color: #e6e2da;
+      color: #ded8ce;
       text-decoration: none;
       transition: color 0.2s;
     }
     .hotline-link:hover { color: var(--gold-primary); }
     .hotline-link span { color: var(--gold-primary); }
 
-    /* Header & Navigation */
+    /* Site Navigation Header */
     .site-header {
       position: sticky;
       top: 0;
@@ -159,10 +161,6 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-    }
-    .brand-text {
-      display: flex;
-      flex-direction: column;
     }
     .brand-name {
       font-family: var(--font-serif);
@@ -293,7 +291,7 @@
     /* Hero Section */
     .hero-section {
       position: relative;
-      min-height: 86vh;
+      min-height: 84vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -311,7 +309,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.38) contrast(1.15);
+      filter: brightness(0.36) contrast(1.15);
       transform: scale(1.02);
     }
     .hero-overlay {
@@ -345,7 +343,7 @@
       align-items: center;
       gap: 8px;
       border: 1px solid var(--gold-border);
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.65);
       padding: 5px 16px;
       border-radius: 30px;
       font-size: 11px;
@@ -372,13 +370,13 @@
       margin-bottom: 24px;
     }
 
-    /* Hero Partner Cards Row */
+    /* Partner Hotlines Row */
     .partner-cards-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
       width: 100%;
     }
     .partner-chip {
@@ -415,7 +413,7 @@
       color: #ffffff;
     }
 
-    /* Concierge Search Bar */
+    /* Concierge Search Panel (Amount option removed!) */
     .search-panel {
       width: 100%;
       max-width: 860px;
@@ -425,12 +423,12 @@
       border-radius: 8px;
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
       backdrop-filter: blur(12px);
+      text-align: left;
     }
     .search-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
-      text-align: left;
     }
     .search-field label {
       display: block;
@@ -441,7 +439,8 @@
       margin-bottom: 6px;
       font-weight: 600;
     }
-    .search-field select {
+    .search-field select,
+    .search-field input {
       width: 100%;
       background: #0b0d12;
       border: 1px solid var(--border-medium);
@@ -452,7 +451,8 @@
       outline: none;
       cursor: pointer;
     }
-    .search-field select:focus {
+    .search-field select:focus,
+    .search-field input:focus {
       border-color: var(--gold-primary);
     }
 
@@ -582,6 +582,17 @@
       font-weight: 600;
       border-radius: 2px;
     }
+    .card-status-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.85);
+      color: #ffffff;
+      padding: 3px 8px;
+      font-size: 9.5px;
+      border-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
     .card-bottom-bar {
       position: absolute;
       bottom: 12px;
@@ -592,19 +603,14 @@
       align-items: flex-end;
     }
     .card-enclave {
-      font-size: 10.5px;
+      font-size: 11px;
       color: var(--gold-light);
       text-transform: uppercase;
       letter-spacing: 0.08em;
       font-weight: 500;
-      display: block;
-    }
-    .card-price {
-      font-family: var(--font-serif);
-      font-size: 24px;
-      color: #ffffff;
-      font-weight: 500;
-      line-height: 1;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
     .card-body {
@@ -634,15 +640,19 @@
     }
     .card-specs {
       font-size: 11.5px;
-      color: #8c867b;
+      font-family: monospace;
+      color: #ded8ce;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 6px 10px;
+      border-radius: 3px;
       margin-bottom: 12px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border-subtle);
+      border: 1px solid var(--border-subtle);
     }
     .card-highlights {
       font-size: 11px;
       color: var(--gold-primary);
       margin-bottom: 16px;
+      line-height: 1.4;
     }
     .card-footer-actions {
       display: flex;
@@ -722,13 +732,13 @@
       color: var(--text-muted);
     }
 
-    /* EMI Finance Section */
+    /* Finance Section */
     .finance-section {
       background: var(--bg-dark);
     }
     .finance-split {
       display: grid;
-      grid-template-columns: 5fr 7fr;
+      grid-template-columns: 6fr 6fr;
       gap: 40px;
       align-items: center;
     }
@@ -739,7 +749,7 @@
     .finance-info-bullets li {
       font-size: 12.5px;
       color: #ded8cb;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -749,66 +759,28 @@
       color: var(--gold-primary);
       font-weight: bold;
     }
-    .calculator-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-medium);
-      padding: 28px;
-      border-radius: 6px;
-    }
-    .calc-slider-group {
+    .banking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
       margin-bottom: 20px;
     }
-    .calc-slider-header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-    .calc-slider-header strong {
-      color: #ffffff;
-      font-family: monospace;
-      font-size: 14px;
-    }
-    .range-input {
-      width: 100%;
-      height: 6px;
+    .banking-card {
       background: #0b0d12;
-      border-radius: 3px;
-      accent-color: var(--gold-primary);
-      outline: none;
-      cursor: pointer;
-    }
-    .slider-endpoints {
-      display: flex;
-      justify-content: space-between;
-      font-size: 10px;
-      color: var(--text-dim);
-      margin-top: 4px;
-    }
-    .emi-result-panel {
-      background: #0d1017;
-      border: 1px solid var(--gold-border);
-      padding: 18px 20px;
+      border: 1px solid var(--border-subtle);
+      padding: 16px;
       border-radius: 4px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
+      text-align: center;
     }
-    .emi-result-label {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
+    .banking-card strong {
+      font-size: 13.5px;
+      color: #fff;
       display: block;
+      margin-bottom: 2px;
     }
-    .emi-result-amount {
-      font-family: var(--font-serif);
-      font-size: 28px;
-      color: var(--gold-primary);
-      font-weight: 500;
+    .banking-card span {
+      font-size: 10.5px;
+      color: var(--text-muted);
     }
 
     /* Naraina Office & Contact Section */
@@ -940,7 +912,7 @@
       background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     }
 
-    /* Modal Dialogs */
+    /* Modal Dialog */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -983,7 +955,7 @@
     }
     .modal-close-btn:hover { color: #fff; }
 
-    /* Responsive Breakpoints */
+    /* Responsive adjustments */
     @media (max-width: 992px) {
       .search-grid { grid-template-columns: 1fr; }
       .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
@@ -1005,14 +977,13 @@
 </head>
 <body>
 
-  <!-- TOP ADVISORY BAR (DESKTOP) -->
   <aside class="top-bar" aria-label="Business credentials and direct hotlines">
     <div class="container top-bar-inner">
       <div class="top-bar-left">
         <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--gold-primary)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         <span>WZ 559 A/1, Naraina Village, New Delhi 110028</span>
         <span style="opacity:0.3">·</span>
-        <span style="color:var(--gold-primary); font-weight:500;">Shop, Flat, Floor Sales &amp; Purchase · Contact For Rent · ₹50k to ₹5 Cr</span>
+        <span style="color:var(--gold-primary); font-weight:500;">Sales, Purchase, Collaboration &amp; Rent · Verified Freehold Titles</span>
       </div>
       <div class="top-bar-right">
         <span>Direct Hotlines:</span>
@@ -1043,16 +1014,16 @@
         <div class="brand-text">
           <span class="brand-name">YAASHI</span>
           <span class="brand-sub">PROPERTIES &amp; FINANCE</span>
-          <span class="brand-tag">LUXURY PROPERTIES</span>
+          <span class="brand-tag">EXCLUSIVE REAL ESTATE</span>
         </div>
       </a>
 
       <!-- NAVIGATION LINKS -->
       <nav>
         <ul class="nav-links">
-          <li><a href="#portfolio">Properties (₹50k - ₹5 Cr)</a></li>
+          <li><a href="#portfolio">Properties Portfolio</a></li>
           <li><a href="#collaboration">Builder Collaboration</a></li>
-          <li><a href="#finance">Finance &amp; EMI</a></li>
+          <li><a href="#finance">Finance Desk</a></li>
           <li><a href="#contact">Naraina Office</a></li>
         </ul>
       </nav>
@@ -1071,7 +1042,7 @@
   <!-- HERO BANNER SECTION -->
   <section class="hero-section" id="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80" alt="Yaashi Luxury Properties & Architecture">
+      <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Yaashi Luxury Properties & Architecture" onerror="this.src='https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800'">
     </div>
     <div class="hero-overlay"></div>
 
@@ -1088,7 +1059,7 @@
       </div>
 
       <div class="hero-pre-badge">
-        <span>₹50,000 to ₹5 Crore · All Kinds Of Properties Solution</span>
+        <span>Verified Freehold Properties &amp; Turnkey Builder Collaborations</span>
       </div>
 
       <h1 class="hero-title">
@@ -1110,14 +1081,14 @@
           </div>
         </a>
         <a href="tel:8700198712" class="partner-chip">
-          <span style="font-size:16px;">📞</span>
+          <span style="font-size:16px;">🤝</span>
           <div class="partner-chip-info">
             <span class="partner-chip-role">Arnav (Nannu) · Collab</span>
             <span class="partner-chip-phone">8700198712</span>
           </div>
         </a>
         <a href="tel:7838480991" class="partner-chip">
-          <span style="font-size:16px;">📞</span>
+          <span style="font-size:16px;">🏦</span>
           <div class="partner-chip-info">
             <span class="partner-chip-role">Aditya Tanwar · Finance</span>
             <span class="partner-chip-phone">7838480991</span>
@@ -1129,14 +1100,14 @@
         </a>
       </div>
 
-      <!-- SEARCH FILTERS -->
+      <!-- SEARCH FILTERS (AMOUNT OPTION REMOVED) -->
       <div class="search-panel">
         <div class="search-grid">
           <div class="search-field">
             <label for="filterIntent">Service Intent</label>
             <select id="filterIntent" onchange="filterProperties()">
               <option value="all">All (Sale, Rent, Collaboration)</option>
-              <option value="Sale">For Sale</option>
+              <option value="Sale">For Sale (Registry)</option>
               <option value="Rent">For Rent</option>
               <option value="Collaboration">Builder Collaboration</option>
             </select>
@@ -1151,13 +1122,13 @@
             </select>
           </div>
           <div class="search-field">
-            <label for="filterBudget">Budget Bracket</label>
-            <select id="filterBudget" onchange="filterProperties()">
-              <option value="all">All Budgets (₹50k to ₹5 Cr)</option>
-              <option value="rent">₹50,000 – ₹1.5 Lakh (Rentals)</option>
-              <option value="under1cr">₹50 Lakh – ₹1.5 Crore</option>
-              <option value="1cr_3cr">₹1.5 Crore – ₹3.0 Crore</option>
-              <option value="3cr_5cr">₹3.0 Crore – ₹5.0 Crore</option>
+            <label for="filterLocation">Location / Enclave</label>
+            <select id="filterLocation" onchange="filterProperties()">
+              <option value="all">All Enclaves (Naraina & NCR)</option>
+              <option value="Naraina Village">Naraina Village</option>
+              <option value="Naraina Vihar">Naraina Vihar (Block A, B, C)</option>
+              <option value="Commercial Market">Main Commercial Plaza</option>
+              <option value="West Delhi">West Delhi Sector</option>
             </select>
           </div>
         </div>
@@ -1180,29 +1151,29 @@
           <div class="metric-desc">Stilt + 4 turnkey redevelopments</div>
         </div>
         <div>
-          <div class="metric-value">₹50k - ₹5 Cr</div>
-          <div class="metric-title">Service Range</div>
-          <div class="metric-desc">Rentals to trophy residential floors</div>
-        </div>
-        <div>
           <div class="metric-value">100%</div>
           <div class="metric-title">Freehold Due Diligence</div>
           <div class="metric-desc">Clear titles &amp; bank loan pre-approved</div>
+        </div>
+        <div>
+          <div class="metric-value gold">15+ Yrs</div>
+          <div class="metric-title">Direct Partner Trust</div>
+          <div class="metric-desc">Naraina Village &amp; Vihar specialists</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROPERTIES PORTFOLIO (₹50,000 to ₹5 Crore) -->
+  <!-- PROPERTIES PORTFOLIO -->
   <section class="section-padding" id="portfolio">
     <div class="container">
       <div class="section-header">
         <div>
-          <span class="section-eyebrow">Curated Inventory · ₹50k to ₹5 Cr</span>
+          <span class="section-eyebrow">Curated Property Inventory</span>
           <h2 class="section-title">Shop, Flat, Floor &amp; Collaboration Solutions</h2>
         </div>
         <p class="section-desc">
-          Every listing is strictly physically verified with clear freehold ownership, realistic market valuations, and direct partner representation.
+          Every listing is strictly physically verified with clear freehold ownership, physical site inspection, and direct partner representation.
         </p>
       </div>
 
@@ -1220,7 +1191,7 @@
         <span class="section-eyebrow">Plot Redevelopment &amp; Joint Ventures</span>
         <h2 class="section-title">Builder Collaboration Desk</h2>
         <p style="color:var(--text-muted); font-size:13.5px; margin-top:8px; line-height:1.6;">
-          Have an ancestral plot or old house in Naraina Village, Naraina Vihar, or Delhi NCR? Maximize your family asset with Yaashi Properties. We provide Stilt + 4 Floors redevelopment with highest landowner floor ratio, hefty upfront security deposit, and branded luxury fittings.
+          Have an ancestral plot or old house in Naraina Village, Naraina Vihar, or Delhi NCR? Maximize your family asset with Yaashi Properties. We provide Stilt + 4 Floors redevelopment with highest landowner floor ratio, generous upfront security deposit, and branded luxury fittings.
         </p>
       </div>
 
@@ -1245,7 +1216,7 @@
       <div class="collab-cta-box">
         <div>
           <h4 class="collab-cta-title">Have a plot in Naraina or Delhi NCR?</h4>
-          <p class="collab-cta-desc">Speak directly with Arnav (Nannu) or Kunal Kumar for an instant site inspection, floor-sharing proposal, and valuation.</p>
+          <p class="collab-cta-desc">Speak directly with Arnav (Nannu) or Kunal Kumar for an instant site inspection, floor-sharing proposal, and architectural guidance.</p>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
           <a href="tel:8700198712" class="btn-gold">Call Arnav: 8700198712</a>
@@ -1257,7 +1228,7 @@
     </div>
   </section>
 
-  <!-- FINANCE SERVICES & HOME LOAN EMI CALCULATOR -->
+  <!-- FINANCE SERVICES & HOME LOAN ASSISTANCE -->
   <section class="section-padding finance-section" id="finance">
     <div class="container">
       <div class="finance-split">
@@ -1268,10 +1239,10 @@
             Direct banking tie-ups with SBI, HDFC Bank, ICICI Bank, Axis Bank, and PNB Housing. Lowest interest rates, quick approvals, and doorstep documentation.
           </p>
           <ul class="finance-info-bullets">
-            <li>Home Loans for Builder Floors &amp; Flats (₹10 Lakh to ₹5 Crore)</li>
+            <li>Home Loans for Builder Floors &amp; Flats with clear title clearance</li>
             <li>Loan Against Property (LAP) &amp; Commercial Shop Mortgages</li>
             <li>Balance Transfer with Top-Up facility at reduced ROI</li>
-            <li>Up to 80% LTV financing with clear legal &amp; technical reports</li>
+            <li>Up to 80% LTV financing with verified legal &amp; technical reports</li>
           </ul>
           <div style="margin-top:20px;">
             <a href="tel:7838480991" class="btn-gold-outline font-mono">
@@ -1280,63 +1251,48 @@
           </div>
         </div>
 
-        <!-- Interactive EMI Calculator -->
-        <div class="calculator-card">
+        <div style="background:var(--bg-card); border:1px solid var(--border-medium); padding:28px; border-radius:6px;">
           <div style="border-bottom:1px solid var(--border-subtle); padding-bottom:12px; margin-bottom:18px;">
             <h3 style="font-size:14px; text-transform:uppercase; letter-spacing:0.1em; color:#ffffff;">
-              Interactive Home Loan EMI Estimator
+              Banking Tie-Ups &amp; Approvals
             </h3>
+            <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">
+              Our finance team conducts upfront scrutiny ensuring 100% bankability.
+            </p>
           </div>
 
-          <div class="calc-slider-group">
-            <div class="calc-slider-header">
-              <span>Loan Amount:</span>
-              <strong id="loanAmountDisplay">₹50 Lakh</strong>
+          <div class="banking-grid">
+            <div class="banking-card">
+              <strong>State Bank of India</strong>
+              <span>Pre-Approved Sanctions</span>
             </div>
-            <input type="range" id="loanRange" min="10" max="500" step="5" value="50" oninput="updateEmi()" class="range-input">
-            <div class="slider-endpoints">
-              <span>₹10 Lakh</span>
-              <span>₹5 Crore</span>
+            <div class="banking-card">
+              <strong>HDFC Bank</strong>
+              <span>Priority Builder Desk</span>
             </div>
-          </div>
-
-          <div class="calc-slider-group">
-            <div class="calc-slider-header">
-              <span>Interest Rate:</span>
-              <strong id="interestDisplay">8.5% p.a.</strong>
+            <div class="banking-card">
+              <strong>ICICI Bank</strong>
+              <span>Fast-Track Processing</span>
             </div>
-            <input type="range" id="interestRange" min="8.0" max="11.5" step="0.1" value="8.5" oninput="updateEmi()" class="range-input">
-            <div class="slider-endpoints">
-              <span>8.0%</span>
-              <span>11.5%</span>
-            </div>
-          </div>
-
-          <div class="calc-slider-group">
-            <div class="calc-slider-header">
-              <span>Loan Tenure:</span>
-              <strong id="tenureDisplay">20 Years</strong>
-            </div>
-            <input type="range" id="tenureRange" min="5" max="30" step="1" value="20" oninput="updateEmi()" class="range-input">
-            <div class="slider-endpoints">
-              <span>5 Years</span>
-              <span>30 Years</span>
+            <div class="banking-card">
+              <strong>PNB Housing</strong>
+              <span>High Loan-to-Value</span>
             </div>
           </div>
 
-          <div class="emi-result-panel">
+          <div style="background:#0d1017; border:1px solid var(--gold-border); padding:16px 20px; border-radius:4px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
             <div>
-              <span class="emi-result-label">Estimated Monthly EMI</span>
-              <span class="emi-result-amount" id="emiResult">₹43,391 / mo</span>
+              <span style="font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); display:block;">Complimentary Assessment</span>
+              <span style="font-family:var(--font-serif); font-size:17px; color:#ffffff;">Evaluate Eligibility With Aditya</span>
             </div>
-            <a href="tel:7838480991" class="btn-gold">Apply with Aditya</a>
+            <a href="tel:7838480991" class="btn-gold">Consult Aditya</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- NARAINA OFFICE & REQUIREMENT SUBMISSION -->
+  <!-- NARAINA OFFICE & REQUIREMENT SUBMISSION (AMOUNT OPTION REMOVED) -->
   <section class="section-padding contact-section" id="contact">
     <div class="container">
       <div class="contact-split">
@@ -1344,7 +1300,7 @@
           <span class="section-eyebrow">Headquarters &amp; Direct Desks</span>
           <h2 class="section-title">Yaashi Properties &amp; Finance</h2>
           <p style="color:var(--text-muted); font-size:13px; margin:8px 0 20px;">
-            Sales · Purchase · Collaboration · Rent · ₹50k to ₹5 Cr Solutions
+            Sales · Purchase · Collaboration · Rent · Complete Solutions
           </p>
 
           <div class="office-card">
@@ -1385,7 +1341,7 @@
           <div class="partner-contact-row">
             <div>
               <div style="font-size:13px; color:#fff; font-weight:600;">Aditya Tanwar</div>
-              <div style="font-size:11px; color:var(--text-muted);">Partner · Finance &amp; Investment Solutions</div>
+              <div style="font-size:11px; color:var(--text-muted);">Partner · Finance &amp; Loan Solutions</div>
             </div>
             <div style="display:flex; gap:6px;">
               <a href="tel:7838480991" class="btn-gold font-mono" style="padding:4px 10px; font-size:11px;">7838480991</a>
@@ -1394,7 +1350,7 @@
           </div>
         </div>
 
-        <!-- Client Inquiry Form -->
+        <!-- Client Inquiry Form (Zero amount options) -->
         <div class="inquiry-form-card">
           <h3 style="font-family:var(--font-serif); font-size:24px; color:#fff; margin-bottom:4px;">
             Submit Property Requirement
@@ -1407,10 +1363,10 @@
             <div class="form-group">
               <label for="reqService">Service Desired *</label>
               <select id="reqService" required>
-                <option value="buy_floor">Buy Luxury Builder Floor (₹1.45 Cr – ₹4.95 Cr)</option>
-                <option value="buy_shop">Buy Commercial Shop (₹65 Lakh+)</option>
-                <option value="rent">Rent Floor / Shop (₹50,000 – ₹1.5 Lakh/mo)</option>
-                <option value="collaboration">Builder Collaboration / Joint Venture Plot (₹1 Cr – ₹5 Cr)</option>
+                <option value="buy_floor">Buy Luxury Builder Floor</option>
+                <option value="buy_shop">Buy Commercial Shop / Showroom</option>
+                <option value="rent">Rent Floor / Commercial Space</option>
+                <option value="collaboration">Builder Collaboration / Joint Venture Plot</option>
                 <option value="finance">Home Loan / Mortgage Loan Against Property</option>
               </select>
             </div>
@@ -1427,18 +1383,13 @@
             </div>
 
             <div class="form-group">
-              <label for="reqBudget">Budget Preference</label>
-              <select id="reqBudget">
-                <option>₹50,000 – ₹1.5 Lakh / month (Rental)</option>
-                <option>₹50 Lakh – ₹1.5 Crore</option>
-                <option>₹1.5 Crore – ₹3.0 Crore</option>
-                <option>₹3.0 Crore – ₹5.0 Crore (Crown Luxury Floor / Plot)</option>
-              </select>
+              <label for="reqLocation">Preferred Location / Enclave</label>
+              <input type="text" id="reqLocation" placeholder="e.g. Naraina Vihar Block B, Naraina Village Main Road, Ring Road...">
             </div>
 
             <div class="form-group">
-              <label for="reqNotes">Specific Requirements / Location</label>
-              <textarea id="reqNotes" rows="2" placeholder="e.g. 3 BHK in Naraina Vihar Block B, park facing, ready possession"></textarea>
+              <label for="reqNotes">Specific Requirements / Dimensions</label>
+              <textarea id="reqNotes" rows="3" placeholder="e.g. 3 or 4 BHK, Park facing, Lift & Stilt Parking mandatory, ready to move..."></textarea>
             </div>
 
             <button type="submit" class="btn-gold" style="width:100%; padding:12px; font-size:12px;">
@@ -1478,7 +1429,7 @@
         <span>·</span>
         <a href="https://www.instagram.com/yaashiproperties" target="_blank" rel="noopener noreferrer" style="color:#f472b6; text-decoration:none;">Instagram</a>
         <span>·</span>
-        <span style="color:#a39c91;">₹50,000 to ₹5 Crore Solutions</span>
+        <span style="color:#a39c91;">Sales, Purchase, Collaboration &amp; Rent</span>
       </div>
 
       <div>
@@ -1493,7 +1444,7 @@
       <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       <span class="label-text">Instagram</span>
     </a>
-    <a href="https://wa.me/918076950200?text=Hello%20Yaashi%20Properties%2C%20I%20am%20interested%20in%20properties%20(Range%20%E2%82%B950k%20to%20%E2%82%B95%20Cr)" target="_blank" rel="noopener noreferrer" class="float-btn float-btn-whatsapp" title="Chat on WhatsApp">
+    <a href="https://wa.me/918076950200?text=Hello%20Yaashi%20Properties%2C%20I%20am%20interested%20in%20properties" target="_blank" rel="noopener noreferrer" class="float-btn float-btn-whatsapp" title="Chat on WhatsApp">
       <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.176L2 22l4.957-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
       <span class="label-text">WhatsApp</span>
     </a>
@@ -1508,7 +1459,7 @@
         <h3 style="font-family:var(--font-serif); font-size:24px; color:#ffffff;">Schedule Site Visit</h3>
       </div>
       <p style="font-size:12px; color:var(--text-muted); margin-bottom:16px;" id="modalPropertyNotice">
-        Inspecting: All Available Listings in Naraina
+        Inspecting: Available Properties in Naraina
       </p>
 
       <form onsubmit="handleBookingSubmit(event)">
@@ -1547,7 +1498,7 @@
   <!-- JAVASCRIPT LOGIC (SELF-CONTAINED, ZERO EXTERNAL DEPENDENCIES) -->
   <script>
     // -------------------------------------------------------------
-    // CURATED DATA: ₹50,000 to ₹5 Crore Inventory
+    // CURATED DATA (Amount & Budget brackets removed!)
     // -------------------------------------------------------------
     const propertiesData = [
       {
@@ -1557,11 +1508,10 @@
         enclave: 'Main Commercial Market, Naraina Village',
         type: 'Commercial Shop & Showroom',
         intent: 'Rent',
-        priceINR: 50000,
-        priceDisplay: '₹50,000 / month',
         specs: '480 sq ft · 53 Sq. Yds · Commercial Ground Floor',
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-        highlights: 'High Footfall · Toughened Glass Frontage · 2-Min to Metro · Power Backup'
+        image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800',
+        highlights: 'High Footfall · Toughened Glass Frontage · 2-Min to Metro · Power Backup',
+        statusBadge: 'Immediate Possession'
       },
       {
         id: 'prop-2',
@@ -1570,11 +1520,10 @@
         enclave: 'Block C, Naraina Vihar, New Delhi',
         type: 'Luxury Builder Floor',
         intent: 'Rent',
-        priceINR: 115000,
-        priceDisplay: '₹1.15 Lakh / month',
         specs: '3 BHK · 3 Baths · 230 Sq. Yds (2100 sq ft)',
-        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
-        highlights: 'Schindler Elevator · 2 Stilt Parkings · Fully Furnished · VRV Central AC'
+        image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+        highlights: 'Schindler Elevator · 2 Stilt Parkings · Fully Furnished · VRV Central AC',
+        statusBadge: 'Premium Rental'
       },
       {
         id: 'prop-3',
@@ -1583,11 +1532,10 @@
         enclave: 'Commercial Market Plaza, Naraina Village',
         type: 'Commercial Shop & Showroom',
         intent: 'Sale',
-        priceINR: 6500000,
-        priceDisplay: '₹65 Lakh',
         specs: '380 sq ft · Freehold Title · Verified Tenant in Place',
-        image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186f5f8?auto=format&fit=crop&w=800&q=80',
-        highlights: '6.5%+ Instant Rental Yield · Clear Title · ₹35,000/mo Rent · Bank Loan Ready'
+        image: 'https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=800',
+        highlights: 'High Rental Yield · Clear Title Registry · Active Tenant · Bank Loan Approved',
+        statusBadge: 'High-Yield Freehold'
       },
       {
         id: 'prop-4',
@@ -1596,11 +1544,10 @@
         enclave: 'Naraina / West Delhi Residential Sector',
         type: 'Luxury Builder Floor',
         intent: 'Sale',
-        priceINR: 14500000,
-        priceDisplay: '₹1.45 Crore',
         specs: '2 BHK · 2 Baths · 122 Sq. Yds (1100 sq ft)',
-        image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80',
-        highlights: 'Lift Facility · Reserved Parking · German Quartz Kitchen · Lowest EMI'
+        image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800',
+        highlights: 'Lift Facility · Reserved Parking · German Quartz Kitchen · Clear MCD Pass',
+        statusBadge: 'Ready to Move'
       },
       {
         id: 'prop-5',
@@ -1609,11 +1556,10 @@
         enclave: 'Block B, Naraina Vihar, New Delhi',
         type: 'Luxury Builder Floor',
         intent: 'Sale',
-        priceINR: 28500000,
-        priceDisplay: '₹2.85 Crore',
         specs: '3 BHK · 3 Baths · 200 Sq. Yds (1800 sq ft)',
-        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
-        highlights: 'Otis Automatic Lift · 2 Stilt Parkings · Imported Italian Marble · DDA Sanctioned'
+        image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+        highlights: 'Otis Automatic Lift · 2 Stilt Parkings · Imported Italian Marble · DDA Sanctioned',
+        statusBadge: 'Prime Residential'
       },
       {
         id: 'prop-6',
@@ -1622,11 +1568,10 @@
         enclave: 'Block A, Naraina Vihar, New Delhi',
         type: 'Luxury Builder Floor',
         intent: 'Sale',
-        priceINR: 39500000,
-        priceDisplay: '₹3.95 Crore',
         specs: '4 BHK · 4 Baths + Servant · 275 Sq. Yds (2475 sq ft)',
-        image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
-        highlights: 'Direct Lush Park View · Private Schindler Lift · 2 Reserved Parkings · Daikin VRV'
+        image: 'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800',
+        highlights: 'Direct Lush Park View · Private Schindler Lift · 2 Reserved Parkings · Daikin VRV',
+        statusBadge: 'Park Facing Sovereign'
       },
       {
         id: 'prop-7',
@@ -1635,11 +1580,10 @@
         enclave: 'Block A, Naraina Vihar, New Delhi',
         type: 'Luxury Builder Floor',
         intent: 'Sale',
-        priceINR: 49500000,
-        priceDisplay: '₹4.95 Crore',
         specs: '4 BHK · 5 Baths · 350 Sq. Yds (3150 sq ft)',
-        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
-        highlights: 'Landscaped Private Terrace · 3 Stilt Parkings · 60ft Boulevard · Biometric Automation'
+        image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800',
+        highlights: 'Landscaped Private Terrace · 3 Stilt Parkings · 60ft Boulevard · Biometric Automation',
+        statusBadge: 'Trophy Penthouse'
       },
       {
         id: 'prop-8',
@@ -1648,11 +1592,10 @@
         enclave: 'Prime Boulevard, Naraina Village & Vihar',
         type: 'Collaboration Project',
         intent: 'Collaboration',
-        priceINR: 50000000,
-        priceDisplay: '₹5.00 Crore',
         specs: '250 Sq. Yds Plot · Stilt + 4 Luxury Floors Sanction',
-        image: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80',
-        highlights: 'Highest Landowner Ratio · Upfront Cash Security · Complete MCD/DDA Sanctions'
+        image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+        highlights: 'Highest Landowner Ratio · Upfront Cash Security · Complete MCD/DDA Sanctions',
+        statusBadge: 'Collaboration Open'
       }
     ];
 
@@ -1676,15 +1619,17 @@
       container.innerHTML = list.map(item => `
         <article class="property-card">
           <div class="card-media">
-            <img src="${item.image}" alt="${item.title}" loading="lazy">
+            <img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800'">
             <div class="card-media-overlay"></div>
             <div class="card-tag">
               ${item.intent === 'Rent' ? 'For Rent' : item.intent === 'Collaboration' ? 'Collaboration' : 'For Sale'}
             </div>
+            <div class="card-status-badge">
+              ${item.statusBadge}
+            </div>
             <div class="card-bottom-bar">
               <div>
-                <span class="card-enclave">${item.enclave}</span>
-                <span class="card-price">${item.priceDisplay}</span>
+                <span class="card-enclave">📍 ${item.enclave}</span>
               </div>
             </div>
           </div>
@@ -1692,14 +1637,14 @@
             <div>
               <h3 class="card-title">${item.title}</h3>
               <p class="card-tagline">${item.tagline}</p>
-              <div class="card-specs">${item.specs}</div>
+              <div class="card-specs">⊞ ${item.specs}</div>
               <div class="card-highlights">✦ ${item.highlights}</div>
             </div>
             <div class="card-footer-actions">
-              <a href="https://wa.me/918076950200?text=Hi%2C%20I%20am%20interested%20in%20${encodeURIComponent(item.title)}%20(${encodeURIComponent(item.priceDisplay)})" target="_blank" rel="noopener noreferrer" class="card-query-link">
-                WhatsApp Query →
+              <a href="https://wa.me/918076950200?text=Hi%2C%20I%20am%20interested%20in%20details%20for%20${encodeURIComponent(item.title)}%20located%20at%20${encodeURIComponent(item.enclave)}" target="_blank" rel="noopener noreferrer" class="card-query-link">
+                WhatsApp Details →
               </a>
-              <button onclick="openBookingModal('${item.title}')" class="btn-gold" style="padding: 6px 12px; font-size: 11px;">
+              <button onclick="openBookingModal('${item.title}')" class="btn-gold" style="padding: 6px 14px; font-size: 11px;">
                 Site Visit
               </button>
             </div>
@@ -1709,46 +1654,21 @@
     }
 
     // -------------------------------------------------------------
-    // FILTER LOGIC
+    // FILTER LOGIC (WITHOUT AMOUNT/BUDGET RESTRICTIONS)
     // -------------------------------------------------------------
     function filterProperties() {
       const intent = document.getElementById('filterIntent').value;
       const type = document.getElementById('filterType').value;
-      const budget = document.getElementById('filterBudget').value;
+      const location = document.getElementById('filterLocation').value;
 
       const filtered = propertiesData.filter(p => {
         if (intent !== 'all' && p.intent !== intent) return false;
         if (type !== 'all' && p.type !== type) return false;
-        if (budget === 'rent' && p.priceINR > 150000) return false;
-        if (budget === 'under1cr' && (p.priceINR < 150000 || p.priceINR > 15000000)) return false;
-        if (budget === '1cr_3cr' && (p.priceINR < 15000000 || p.priceINR > 30000000)) return false;
-        if (budget === '3cr_5cr' && (p.priceINR < 30000000 || p.priceINR > 50000000)) return false;
+        if (location !== 'all' && !p.enclave.toLowerCase().includes(location.toLowerCase())) return false;
         return true;
       });
 
       renderProperties(filtered);
-    }
-
-    // -------------------------------------------------------------
-    // EMI CALCULATOR
-    // -------------------------------------------------------------
-    function updateEmi() {
-      const loanLakh = parseFloat(document.getElementById('loanRange').value);
-      const rate = parseFloat(document.getElementById('interestRange').value);
-      const years = parseFloat(document.getElementById('tenureRange').value);
-
-      document.getElementById('loanAmountDisplay').innerText = loanLakh >= 100 
-        ? `₹${(loanLakh / 100).toFixed(2)} Crore` 
-        : `₹${loanLakh} Lakh`;
-      document.getElementById('interestDisplay').innerText = `${rate.toFixed(1)}% p.a.`;
-      document.getElementById('tenureDisplay').innerText = `${years} Years`;
-
-      const p = loanLakh * 100000;
-      const r = rate / (12 * 100);
-      const n = years * 12;
-
-      const emi = Math.round((p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1));
-      document.getElementById('emiResult').innerText = `₹${emi.toLocaleString('en-IN')} / mo`;
     }
 
     // -------------------------------------------------------------
@@ -1783,12 +1703,14 @@
       const success = document.getElementById('inquirySuccess');
       success.style.display = 'block';
       e.target.reset();
+      setTimeout(() => {
+        success.style.display = 'none';
+      }, 4000);
     }
 
     // Initialize on page load
     window.addEventListener('DOMContentLoaded', () => {
       renderProperties(propertiesData);
-      updateEmi();
 
       // Pre-set today date + 1 day in date picker
       const dateInput = document.getElementById('visitDate');
